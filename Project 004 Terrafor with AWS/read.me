@@ -1,0 +1,40 @@
+# Terraform Initialize
+terraform init
+Observation:
+1) Initialized Local Backend
+2) Downloaded the provider plugins (initialized plugins)
+3) Review the folder structure ".terraform folder"
+
+
+# Terraform Validate
+terraform validate
+Observation:
+1) If any changes to files, those will come as printed in stdout (those file names will be printed in CLI)
+
+
+# Terraform Plan
+terraform plan
+Observation:
+1) Verify the latest AMI ID picked and displayed in plan
+2) Verify the number of resources that going to get created
+3) Verify the variable replacements worked as expected
+
+
+# Terraform Apply
+terraform apply
+[or]
+terraform apply -auto-approve
+Observations:
+1) Create resources on cloud
+2) Created terraform.tfstate file when you run the terraform apply command
+3) Verify the EC2 Instance AMI ID which got created
+
+
+# Terraform Destroy
+terraform plan -destroy  # You can view destroy plan using this command
+terraform destroy
+
+
+# Clean-Up Files
+rm -rf .terraform*
+rm -rf terraform.tfstate*
