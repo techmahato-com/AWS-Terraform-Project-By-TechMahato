@@ -1,24 +1,24 @@
 # Steps to Provision VPC Using Terraform VPC Modules
 # Working Folder
-terraform-manifests/v1-vpc-module
+    terraform-manifests/v1-vpc-module
 
 
 # Terraform Initialize
-terraform init
+    terraform init
 Observation:
 1. Verify if modules got downloaded to .terraform folder
 
 
 # Terraform Validate
-terraform validate
+    terraform validate
 
 
 # Terraform plan
-terraform plan
+    terraform plan
 
 
 # Terraform Apply
-terraform apply -auto-approve
+    terraform apply -auto-approve
 Observation:
 1) Verify VPC
 2) Verify Subnets
@@ -32,26 +32,26 @@ Observation:
 
 
 # Terraform Destroy
-terraform destroy -auto-approve
+    terraform destroy -auto-approve
 
 
 # Delete Files
-rm -rf .terraform*
-rm -rf terraform.tfstate*
+    rm -rf .terraform*
+    rm -rf terraform.tfstate*
 
 
-# Access index.html
-http://<PUBLIC-IP>/index.html
-http://<PUBLIC-IP>/app1/index.html
+# Access index.html (I will Cover Next Module)
+    http://<PUBLIC-IP>/index.html
+    http://<PUBLIC-IP>/app1/index.html
 
 
 # Access metadata.html
-http://<PUBLIC-IP>/app1/metadata.html
+    http://<PUBLIC-IP>/app1/metadata.html
 
 # Terraform Destroy
-terraform plan -destroy  # You can view destroy plan using this command
-terraform destroy
+    terraform plan -destroy  # You can view destroy plan using this command
+    terraform destroy
 
 
 # Clean-Up Files
-rm -rf .terraform*
+    rm -rf .terraform*
